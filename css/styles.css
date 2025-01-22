@@ -1,46 +1,190 @@
-/* Basic resets */
-body, h1, h2, p, ul, li, figure {
+/* ==========================
+   1. FONT IMPORT (OPTIONAL)
+   2. BASIC RESET
+   3. BODY & GLOBAL STYLES
+   4. NAVBAR HOVER EFFECT
+   5. HERO SECTION
+   6. OVERLAY & CAPTION
+========================== */
+
+/* 1. FONT IMPORT (OPTIONAL):
+   If you want to keep font imports in your CSS, 
+   you can uncomment these lines. Otherwise, 
+   link to Google Fonts in your HTML <head>. 
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+
+/* Navbar */
+.navbar-transparent {
+  background-color: rgba(0, 0, 0, 0.5) !important; /* Force override */
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10; /* So it appears above your hero image */
+}
+
+/* 2. BASIC RESET */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
+  /* 3. BODY & GLOBAL STYLES */
   body {
-    font-family: Arial, sans-serif;
+    font-family: "Montserrat", Arial, sans-serif;
+    background-color: #bba6ee; /* Overwritten by hero image */
+    overflow-x: hidden;        /* Prevents horizontal scroll */
   }
   
-  /* Make images responsive */
+  /* Remove default underlines on links in some browsers, 
+     rely on Bootstrap link styles or our custom hover. */
+  a {
+    text-decoration: none;
+  }
+  
+  /* 4. NAVBAR HOVER EFFECT */
+  .navbar-nav .nav-link:hover {
+    color: purple !important;
+  }
+  
+  /* 5. HERO SECTION:
+     Takes up full viewport height and uses a background image 
+     (set in index.html via inline style or in a 'hero' class).
+     We'll define the .hero class for a full-screen background. 
+  */
+  
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    /* The background image is set in HTML inline style or
+       you can do it here, e.g.:
+       background: url("../images/sg.JPG") center center / cover no-repeat;
+    */
+  }
+  
+  /* 6. OVERLAY & CAPTION */
+  /* Transparent black overlay for headings/text */
+  .overlay {
+    position: absolute;
+    top: 50%;          /* halfway down */
+    left: 50%;         /* halfway across */
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5); /* 50% transparent black */
+    color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 600px;
+    width: 80%;  /* adapt on small screens */
+  }
+  
+  .overlay h1 {
+    margin-bottom: 1rem;
+  }
+  
+  /* Caption in the bottom-right corner of the hero */
+  .caption {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+
+
+  
+  .navbar-transparent {
+    background-color: rgba(0, 0, 0, 0.5) !important; /* semi-transparent black */
+    position: static !important; /* Ensure it doesn't cover headings */
+  }
+
+  /*  CONTENT WRAPPER (BLACK BOX) */
+
+
+.text-box {
+    background-color: #000000;  /* black */
+    color: #ffffff;             /* white text */
+    border-radius: 8px;         /* rounded corners */
+    padding: 1rem 2rem;
+    margin: 5rem auto;          /* center horizontally, plus top/bottom spacing */
+    max-width: 800px;           /* limit line length */
+  }
+  
+  /* 4. CENTERED IMAGES WITH WHITE BORDER */
   img {
-    max-width: 100%;
-    height: auto;
+    display: block;        /* so margin auto can center */
+    margin: 2rem auto;     /* center image horizontally, add vertical spacing */
+    border: 5px solid #ffffff; /* white border */
+    border-radius: 4px;    /* optional slight rounding for images */
+    max-width: 90%;        /* prevent overflow on small screens */
+    height: auto;          /* maintain aspect ratio */
   }
   
-  /* Navbar styles (as seen above) */
-  
-  /* Media queries for responsiveness */
-  
-  /* Tablet up to Desktop (or use your own breakpoints) */
-  @media (max-width: 768px) {
-    /* Show hamburger, hide nav links by default */
-    .nav-toggle {
-      display: block;
-    }
-    .nav-links {
-      display: none;
-      flex-direction: column;
-    }
-    .nav-links.show {
-      display: flex;
-    }
+  /* 
+   1. Container for the 3 boxes (flex layout, center them, add spacing).
+*/
+.subgallery-container {
+    display: flex;
+    justify-content: center; /* horizontally centers the 3 boxes as a group */
+    gap: 1rem;               /* spacing between boxes */
+    flex-wrap: wrap;         /* allows boxes to wrap on smaller screens */
+    margin-top: 2rem;        /* some spacing above this section */
   }
   
-  /* Larger devices can keep the nav links visible */
-  @media (min-width: 769px) {
-    .nav-links {
-      display: flex;
-    }
-    .nav-toggle {
-      display: none;
-    }
+  /* 
+     2. Individual black boxes with white text and rounded corners.
+  */
+  .subgallery-box {
+    background-color: #000000; /* black box */
+    color: #ffffff;            /* white text */
+    border-radius: 8px;        /* rounded corners */
+    padding: 1rem;
+    text-align: center;        /* center heading & link text */
+    min-width: 200px;          /* a basic width so the boxes have some size */
+    max-width: 250px;          /* prevent them from getting too wide */
+    flex: 1 1 auto;            /* helps them scale nicely in flex container */
   }
   
+  /* Optional: style the links inside the box if you like */
+  .subgallery-box a {
+    color: #ffffff;       /* keep links white to match box */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .subgallery-box a:hover {
+    color: #9b59b6;       /* purple hover, for instance */
+    text-decoration: underline;
+  }
+  
+  .gallery-container {
+    display: flex;            /* side-by-side layout */
+    flex-wrap: wrap;          /* wrap on smaller screens */
+    justify-content: center;  /* center the images on the page */
+    gap: 2rem;                /* space between each figure */
+    margin-top: 2rem;         /* spacing above the gallery */
+  }
+  
+  /* 2. Basic figure styling */
+  figure {
+    margin: 0;           /* remove default figure margins */
+    text-align: center;  /* center the image in each figure */
+  }
+  
+  /* 3. The black box for the captions */
+  .caption-box {
+    background-color: #000;   /* black box */
+    color: #fff;              /* white text */
+    padding: 0.5rem 1rem;
+    border-radius: 4px;       /* optional rounded corners */
+    margin-top: 0.5rem;       /* small gap above the image */
+    display: inline-block;    /* so it only takes up as much space as needed */
+  }

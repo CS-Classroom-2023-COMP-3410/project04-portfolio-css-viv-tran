@@ -2,12 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link 
+  rel="stylesheet" 
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  >
+  <link rel="stylesheet" href="css/styles.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link 
+  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+  rel="stylesheet"
+>
   <title>About Me</title>
   <!-- 
     This page tells visitors who I am, my background, and my hobbies.
   -->
 </head>
-<body bgcolor=powderblue>
+<!--Nav bar-->
+ <!-- Bootstrap Navbar snippet -->
+ <nav class="navbar navbar-expand-lg navbar-dark navbar-transparent">
+  <a class="navbar-brand" href="index.html">My Portfolio</a>
+  <button class="navbar-toggler" 
+          type="button" 
+          data-bs-toggle="collapse" 
+          data-bs-target="#navbarSupportedContent"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+
+          >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      <li class="nav-item"><a class="nav-link" href="Appa/appa.html">Appa</a></li>
+      <li class="nav-item"><a class="nav-link" href="gallery/gallery.html">Gallery</a></li>
+    </ul>
+  </div>
+</nav>
+<body>
+
+  <div class="text-box">
   <h1>About Me</h1>
   <p>Hi there! My name is Vivian Tran and I'm currently a 3rd year student at the Univeristy of Denver studying computer science and business administration. I was born and raised in Denver and in my free time I enjoy binge watching limited series, building legos, and playing with my dog. You'll hear more about my dog later though as there is a whole page on this site dedicated to him! Did you know that wombats can run up to 25 mph? It's true, they can. That's clearly not a fun fact about me but it's one I often enjoy telling people so I'm claiming it as my own. </p>
   <p>Along with legos and wombats, I'm also interested in photography which is what this site is focused on.</p>
@@ -15,7 +56,7 @@
   <img src="Me.JPG" alt="Me holding a cookie I paid $6 for. Worth it? Yes." width="300">
   <p>Most of the photos I've included in my gallery are from my semester studying abroad, so below is a table of my personal ratings for the cities I visted.</p>
   
-  <table border="1" width="600" bgcolor="#D3D3D3">
+  <table border="1" width="600">
     <!-- Title row (purple) spanning 3 columns -->
     <tr bgcolor="purple">
       <th colspan="3" style="color: white;">
@@ -71,15 +112,7 @@
     </tr>
   
   </table>
-  <br></br>
-  <!-- Navigation links (can be duplicated across pages for consistency) -->
-  <nav>
 
-    <a href="index.html">Home</a> |
-    <a href="about.html">About Me</a> |
-    <a href="contact.html">Contact</a> |
-    <a href="Appa/appa.html">Appa</a> |
-    <a href="gallery/gallery.html">Gallery</a>
-  </nav>
+</div>
 </body>
 </html>

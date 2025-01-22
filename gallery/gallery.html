@@ -1,37 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link 
+  rel="stylesheet" 
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  >
+  <link rel="stylesheet" href="../css/styles.css">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link 
+  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+  rel="stylesheet"
+>
   <title>Gallery</title>
 </head>
+<!--Nav bar-->
+ <!-- Bootstrap Navbar snippet -->
+ <nav class="navbar navbar-expand-lg navbar-dark navbar-transparent">
+  <a class="navbar-brand" href="index.html">My Portfolio</a>
+  <button class="navbar-toggler" 
+          type="button" 
+          data-bs-toggle="collapse" 
+          data-bs-target="#navbarSupportedContent"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
 
-<body bgcolor="RGB(121, 183, 141)">
+          >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+      <li class="nav-item"><a class="nav-link" href="../Appa/appa.html">Appa</a></li>
+      <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+    </ul>
+  </div>
+</nav>
+<body>
   <h1>My Photo Gallery</h1>
 
-  <!-- Typical site navigation (linking back to home, about, etc.) -->
-  <nav>
-    <a href="../index.html">Home</a> |
-    <a href="../about.html">About Me</a> |
-    <a href="../contact.html">Contact</a> |
-    <a href="../Appa/appa.html">Appa</a> |
-    <a href="gallery.html">Gallery</a>
-  </nav>
-  
 
 
   <!-- Links to sub-galleries -->
-  <center>
+<div class="text-box"
+  <p>Check out some of my favorite photos from my film camera!</p>
 
-  <h2>Check out some of my favorite photos from my film camera!</h2>
+</div>
 
-  <a href="people/people.html">People</a>
-  <br></br>
-  <a href="places/places.html">Places</a>
+<div class="subgallery-container">
 
-  </center>
+  <div class="subgallery-box">
+    <h3>People</h3>
+    <p><a href="people/people.html">View Gallery</a></p>
+  </div>
 
 
+  <div class="subgallery-box">
+    <h3>Places</h3>
+    <p><a href="places/places.html">View Gallery</a></p>
+  </div>
+
+
+  </div>
+    <hr>
 </body>
 </html>

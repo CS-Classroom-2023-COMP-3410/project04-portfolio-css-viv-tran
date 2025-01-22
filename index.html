@@ -7,6 +7,14 @@
   >
   <link rel="stylesheet" href="css/styles.css">
 
+  <!-- Google Fonts in <head> of index.html -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link 
+  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+  rel="stylesheet"
+>
+
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -16,23 +24,20 @@
   -->
 </head>
 
-  <body style="background-color:rgb(238, 209, 255)"></body>
-  <!-- Old-school background attribute for page background -->
-  <!-- "text" attribute sets the default text color -->
-
-  <!-- Optional marquee for a retro touch -->
-  <marquee bgcolor="#333333" direction="left" scrollamount="5">
-    <font color="#ffffff">My life through my lens!</font>
-  </marquee>
-
-  <!--Nav bar-->
+<!--Nav bar-->
  <!-- Bootstrap Navbar snippet -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+ <nav class="navbar navbar-expand-lg navbar-dark navbar-transparent">
   <a class="navbar-brand" href="index.html">My Portfolio</a>
   <button class="navbar-toggler" 
           type="button" 
           data-bs-toggle="collapse" 
-          data-bs-target="#navbarSupportedContent">
+          data-bs-target="#navbarSupportedContent"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+
+          >
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -41,48 +46,24 @@
       <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
       <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
       <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      <li class="nav-item"><a class="nav-link" href="projects/project1.html">Projects</a></li>
+      <li class="nav-item"><a class="nav-link" href="Appa/appa.html">Appa</a></li>
       <li class="nav-item"><a class="nav-link" href="gallery/gallery.html">Gallery</a></li>
     </ul>
   </div>
 </nav>
 
+<section class="hero" style="background: url('sg.JPG') center center / cover no-repeat;">
+  <div class="overlay">
+    <!-- heading, paragraph -->
 
-  <h1 align="center">Welcome to My Photography Portfolio</h1>
+  <h1>Welcome to My Photography Portfolio</h1>
+  <p>Hey there! I'm Vivian! Explore my world through the lens of my camera.</p>
+  </div>
+  <div class="caption">Taken in San Gimignano, Tuscany, Italy</div>
+</section>
 
-  <p align="center">
-    <font color="#555555">
-      Hey there! I'm Vivian! Explore my world through the lens of my camera.
-    </font>
-  </p>
 
   <hr>
-
-  
-  <!-- Basic navigation links -->
-  <p align="center">
-    
-    <a href="index.html">Home</a> |
-    <a href="about.html">About</a> |
-    <a href="Appa/appa.html">Appa</a> |
-    <a href="gallery/gallery.html">Full Gallery</a> |
-    <a href="contact.html">Contact</a> |
-  </p>
-
-  <hr>
-
-
-  <figure>
-    <center>
-      <img src= "sg.JPG" alt="A photo of green hills in the Tuscan countryside" width="300" valign="center">
-      <figcaption>Taken in San Gimignano, Tuscany, Italy</figcaption>
-    </center>
-    </figure>
-
-  <!-- Fun commentary or a short description -->
-  <p align="center">
-    Go to my gallery to see some pictures I've taken!
-  </p>
 
   <!-- Another color usage -->
   <hr color="#AA00AA" width="50%">
