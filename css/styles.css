@@ -1,0 +1,46 @@
+/* Basic resets */
+body, h1, h2, p, ul, li, figure {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Make images responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Navbar styles (as seen above) */
+  
+  /* Media queries for responsiveness */
+  
+  /* Tablet up to Desktop (or use your own breakpoints) */
+  @media (max-width: 768px) {
+    /* Show hamburger, hide nav links by default */
+    .nav-toggle {
+      display: block;
+    }
+    .nav-links {
+      display: none;
+      flex-direction: column;
+    }
+    .nav-links.show {
+      display: flex;
+    }
+  }
+  
+  /* Larger devices can keep the nav links visible */
+  @media (min-width: 769px) {
+    .nav-links {
+      display: flex;
+    }
+    .nav-toggle {
+      display: none;
+    }
+  }
+  

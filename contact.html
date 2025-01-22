@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact</title>
+  <!-- 
+    Contact page includes a form that uses mailto: to open the email client.
+  -->
+</head>
+<body bgcolor="RGB(206, 200, 255)">
+  <h1>Contact Me</h1>
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="about.html">About Me</a> |
+    <a href="contact.html">Contact</a> |
+    <a href="Appa/appa.html">Appa</a> |
+    <a href="gallery/gallery.html">Gallery</a>
+  </nav>
+
+  <hr>
+  <p>Are you also obsessed with my dog after browsing my website?? Do you want to see more pictures of him!?!? Then feel free to contact me at vivian.tran@du.edu or by using the form below. </p>
+  <!-- The contact form -->
+  <form action="mailto:vivian.tran@du.edu" method="GET">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br><br>
+  
+    <label for="subject">Subject:</label>
+    <input type="text" id="subject" name="subject">
+    <br><br>
+  
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="body" rows="5" cols="30"></textarea>
+    <br><br>
+  
+    <input type="submit" value="Send Email">
+  </form>
+
+</body>
+</html>
